@@ -7,6 +7,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
         
+        :root {
+            --main-bg-color: #121212;
+            --text-color: #e0e0e0;
+            --highlight-color: #ff4757;
+            --secondary-color: #ffa502;
+            --section-bg-color: #1e272e;
+        }
+        
         html, body {
             height: 100%;
             margin: 0;
@@ -17,17 +25,19 @@
         body {
             font-family: 'Noto Sans KR', sans-serif;
             line-height: 1.6;
-            color: #e0e0e0;
-            background-color: #000000;
+            color: var(--text-color);
+            background-color: var(--main-bg-color);
             padding: 20px;
             box-sizing: border-box;
         }
         .content {
-            max-width: 800px;
+            max-width: 100%;
+            width: 900px;
             margin: 0 auto;
+            padding: 0 15px;
         }
         h1, h2, h3 {
-            color: #ff4757;
+            color: var(--highlight-color);
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         h1 {
@@ -37,7 +47,7 @@
         }
         h2 {
             font-size: 1.8em;
-            border-bottom: 2px solid #ff4757;
+            border-bottom: 2px solid var(--highlight-color);
             padding-bottom: 10px;
             margin-top: 40px;
         }
@@ -49,15 +59,15 @@
             margin-bottom: 20px;
         }
         .highlight {
-            background-color: #1e272e;
-            color: #ffa502;
+            background-color: var(--section-bg-color);
+            color: var(--secondary-color);
             padding: 15px;
             border-radius: 5px;
             margin: 20px 0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .warning {
-            background-color: #ff4757;
+            background-color: var(--highlight-color);
             color: #ffffff;
             padding: 15px;
             border-radius: 5px;
@@ -68,20 +78,20 @@
             text-align: center;
             font-size: 1.2em;
             margin: 20px 0;
-            background-color: #2f3542;
+            background-color: var(--section-bg-color);
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .point-rule {
-            background-color: #2f3542;
+            background-color: var(--section-bg-color);
             padding: 20px;
             border-radius: 5px;
             margin: 20px 0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .point-calculation {
-            background-color: #ff4757;
+            background-color: var(--highlight-color);
             color: #ffffff;
             padding: 15px;
             border-radius: 5px;
@@ -91,13 +101,27 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         strong {
-            color: #ffa502;
+            color: var(--secondary-color);
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .content {
+                padding: 0 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <h1>🎮 스트리머 팀 파이트 test 🎮</h1>
+        <h1>🎮 스트리머 팀 파이트 🎮</h1>
 
         <p><strong>🌟 스트리머 팀 파이트 (Streamer Team Fight)</strong>는 스트리머와 시청자가 한 팀이 되어 점수를 모아 팀을 승리로 이끄는 리그입니다.<br>
         SSFHC (솔로 하드코어) 모드에서 10일간 플레이어가 각자 플레이하며 포인트를 모아 팀에 기여할 수 있습니다.</p>
