@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Path of Exile 스트리머 팀 파이트</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,22 +16,23 @@
         }
         
         html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        body {
             font-family: 'Noto Sans KR', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--main-bg-color);
-            margin: 0;
-            padding: 0;
-            min-height: 100%;
-            height: auto;
         }
-        .wrapper {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        .scroll-container {
+            height: 100%;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
         .content {
-            flex: 1;
             padding: 20px;
             box-sizing: border-box;
         }
@@ -111,7 +112,7 @@
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="scroll-container">
         <div class="content">
             <h1>
                 <i class="fas fa-gamepad icon"></i>
@@ -207,12 +208,5 @@
             <p>각 팀 점수와 포인트 랭킹은 홈페이지를 통해 매일 갱신됩니다.</p>
         </div>
     </div>
-    <script>
-        function adjustHeight() {
-            document.querySelector('.content').style.minHeight = window.innerHeight + 'px';
-        }
-        window.addEventListener('load', adjustHeight);
-        window.addEventListener('resize', adjustHeight);
-    </script>
 </body>
 </html>
