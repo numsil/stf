@@ -10,7 +10,6 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden;
         }
         body {
             font-family: 'Arial', sans-serif;
@@ -19,11 +18,12 @@
             background-color: #000000;
         }
         .container {
+            height: 100%;
             overflow-y: auto;
-            height: 100vh;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
             padding: 20px;
             box-sizing: border-box;
-            -webkit-overflow-scrolling: touch;
         }
 
         h1,
@@ -147,6 +147,16 @@
         <p>스트리머와 시청자 모두의 점수가 합산되기 때문에 스트리머와 시청자가 모두 합심해야 승리할 수 있는 리그입니다.</p>
         <p>각 팀 점수와 포인트 랭킹은 홈페이지를 통해 매일 갱신됩니다.</p>
     </div>
+    <script>
+        // 페이지 로드 시 컨테이너 높이 조정
+        window.addEventListener('load', adjustHeight);
+        window.addEventListener('resize', adjustHeight);
+
+        function adjustHeight() {
+            var container = document.querySelector('.container');
+            container.style.height = window.innerHeight + 'px';
+        }
+    </script>
 </body>
 
 </html>
