@@ -5,166 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>스트리머 팀 파이트</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* 바깥쪽 스크롤 방지 */
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
         }
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
             line-height: 1.6;
             color: #e0e0e0;
-            background-color: #000000;
-        }
-        #outer-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            overflow: hidden;
-        }
-        #inner-container {
-            height: 100%;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
+            background-color: #121212;
             padding: 20px;
             box-sizing: border-box;
         }
-        h1,
-        h2,
-        h3 {
-            color: #ffffff;
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
         }
-
+        h1, h2, h3 {
+            color: #ff4757;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
         h1 {
+            font-size: 2.5em;
             text-align: center;
-            color: #ff6b6b;
             margin-bottom: 30px;
         }
-
         h2 {
-            border-bottom: 2px solid #ff6b6b;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ff4757;
             padding-bottom: 10px;
             margin-top: 40px;
         }
-
-        ul,
-        ol {
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
             padding-left: 20px;
+            margin-bottom: 20px;
         }
-
         .highlight {
-            background-color: #000000;
-            color: #000000;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .warning {
-            background-color: #feca57;
-            color: #000000;
-            padding: 10px;
+            background-color: #1e272e;
+            color: #ffa502;
+            padding: 15px;
             border-radius: 5px;
             margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
+        .warning {
+            background-color: #ff4757;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
         .team-vs {
             text-align: center;
             font-size: 1.2em;
             margin: 20px 0;
-            background-color: #2c3e50;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .point-rule {
-            background-color: #2c3e50;
+            background-color: #2f3542;
             padding: 15px;
             border-radius: 5px;
-            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
+        .point-rule {
+            background-color: #2f3542;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
         .point-calculation {
-            background-color: #000000;
-            color: #000000;
-            padding: 10px;
+            background-color: #ff4757;
+            color: #ffffff;
+            padding: 15px;
             border-radius: 5px;
             text-align: center;
             margin: 20px 0;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
         strong {
-            color: #ff6b6b;
+            color: #ffa502;
         }
     </style>
 </head>
-
 <body>
-    <div id="outer-container">
-        <div id="inner-container">
-            <h1>🎮 스트리머 팀 파이트 🎮</h1>
+    <div class="content">
+        <h1>🎮 스트리머 팀 파이트 🎮</h1>
 
-            <p><strong>🌟 스트리머 팀 파이트 (Streamer Team Fight)</strong>는 스트리머와 시청자가 한 팀이 되어 점수를 모아 팀을 승리로 이끄는 리그입니다.<br>
-                SSFHC (솔로 하드코어) 모드에서 10일간 플레이어가 각자 플레이하며 포인트를 모아 팀에 기여할 수 있습니다.</p>
+        <p><strong>🌟 스트리머 팀 파이트 (Streamer Team Fight)</strong>는 스트리머와 시청자가 한 팀이 되어 점수를 모아 팀을 승리로 이끄는 리그입니다.<br>
+        SSFHC (솔로 하드코어) 모드에서 10일간 플레이어가 각자 플레이하며 포인트를 모아 팀에 기여할 수 있습니다.</p>
 
-            <h2>⓪ 리그 룰 📜</h2>
-            <ul>
-                <li>⚔️ <strong>SSFHC</strong> (Solo Self-Found Hardcore)</li>
-                <li>💀 몬스터 피해 증가</li>
-                <li>⚡ 몬스터 속도 증가</li>
-                <li>🏹 몬스터 투사체 증가</li>
-                <li>📏 몬스터 효과 범위 증가</li>
-            </ul>
+        <h2>⓪ 리그 룰 📜</h2>
+        <ul>
+            <li>⚔️ <strong>SSFHC</strong> (Solo Self-Found Hardcore)</li>
+            <li>💀 몬스터 피해 증가</li>
+            <li>⚡ 몬스터 속도 증가</li>
+            <li>🏹 몬스터 투사체 증가</li>
+            <li>📏 몬스터 효과 범위 증가</li>
+        </ul>
 
-            <h2>① 팀 룰 🏆</h2>
-            <p>팀은 스트리머 A팀과 스트리머 B팀으로 나누어집니다.</p>
-            <p>스트리머 팀이 정해지면 A팀과 B팀은 각각 팀 명을 정하게 됩니다. 임시로 이전 리그의 팀명을 예로 들겠습니다.</p>
-            <div class="team-vs">
-                <strong>A 팀 (비정상) VS B 팀 (하교수)</strong>
-            </div>
-            <p>시청자들은 닉네임에 팀 명을 포함하여 자동 참가하게 됩니다. (ex: 비정상맨, 하교수_노누일호기 등)</p>
-            <div class="warning">
-                <strong>⚠️ 팀명을 정하지 않은 유저는 팀에 속하지 않아 상품을 획득할 수 없습니다.</strong>
-            </div>
-
-            <h2>② 점수 획득 방식 및 집계 📊</h2>
-            <p>점수 획득 방식은 스트리머와 일반 시청자 모두 동일합니다. 아래 포인트 룰에 따라 획득한 포인트를 합산해 팀 점수가 됩니다.</p>
-            <h3>[포인트 룰]</h3>
-            <div class="point-rule">
-                <ol>
-                    <li>🏅 <strong>레벨 포인트</strong>: 레벨 5당 +1P (최대 95레벨, 총 19P)</li>
-                    <li>👑 <strong>보스 킬 시작 +1P, 총 2P</strong>: 퀘스트 총주교/포식자 <em>일반도 허용</em></li>
-                    <li>💥 <strong>일반 보스 +2P, 총 16P</strong>: 앗지리/카타리나(83)/사이러스/메이븐/쉐이퍼/엘더/우버 엘더/우버 앗지리</li>
-                    <li>🌍 <strong>영역 +2P, 총 6P</strong>: 뒤틀린 영역/형성된 영역/숨겨진 영역</li>
-                    <li>💀 <strong>끔찍한 영역 및 우버 보스 +3P, 총 24P</strong>: 끔찍한 영역/우버 사이러스/우버 메이븐/우버 코텍스/우버 포식자/우버 총주교/우버 쉐이퍼/우버
-                        우버 엘더</li>
-                </ol>
-                <p><strong>🛡️ 개인 최대 포인트는 총 67P</strong></p>
-                <p><strong>💰 바운티 포인트 +1P</strong>: 바운티 포인트는 시청자들이 건 어려운 현상금 미션을 클리어하면 획득할 수 있습니다. 현상금 상품은 현상금 획득자에게 제공되고,
-                    바운티 포인트는 팀에 귀속됩니다.</p>
-            </div>
-
-            <h2>🏅 팀 포인트 계산 🏅</h2>
-            <div class="point-calculation">
-                <strong>팀 포인트 = 각 팀 상위 20명의 포인트 + 스트리머 포인트 + 바운티 포인트</strong>
-            </div>
-            <p>스트리머와 시청자 모두의 점수가 합산되기 때문에 스트리머와 시청자가 모두 합심해야 승리할 수 있는 리그입니다.</p>
-            <p>각 팀 점수와 포인트 랭킹은 홈페이지를 통해 매일 갱신됩니다.</p>
+        <h2>① 팀 룰 🏆</h2>
+        <p>팀은 스트리머 A팀과 스트리머 B팀으로 나누어집니다.</p>
+        <p>스트리머 팀이 정해지면 A팀과 B팀은 각각 팀 명을 정하게 됩니다. 임시로 이전 리그의 팀명을 예로 들겠습니다.</p>
+        <div class="team-vs">
+            <strong>A 팀 (비정상) VS B 팀 (하교수)</strong>
         </div>
+        <p>시청자들은 닉네임에 팀 명을 포함하여 자동 참가하게 됩니다. (ex: 비정상맨, 하교수_노누일호기 등)</p>
+        <div class="warning">
+            <strong>⚠️ 주의: 팀명을 정하지 않은 유저는 팀에 속하지 않아 상품을 획득할 수 없습니다.</strong>
+        </div>
+
+        <h2>② 점수 획득 방식 및 집계 📊</h2>
+        <p>점수 획득 방식은 스트리머와 일반 시청자 모두 동일합니다. 아래 포인트 룰에 따라 획득한 포인트를 합산해 팀 점수가 됩니다.</p>
+        <h3>[포인트 룰]</h3>
+        <div class="point-rule">
+            <ol>
+                <li>🏅 <strong>레벨 포인트</strong>: 레벨 5당 +1P (최대 95레벨, 총 19P)</li>
+                <li>👑 <strong>보스 킬 시작 +1P, 총 2P</strong>: 퀘스트 총주교/포식자 <em>일반도 허용</em></li>
+                <li>💥 <strong>일반 보스 +2P, 총 16P</strong>: 앗지리/카타리나(83)/사이러스/메이븐/쉐이퍼/엘더/우버 엘더/우버 앗지리</li>
+                <li>🌍 <strong>영역 +2P, 총 6P</strong>: 뒤틀린 영역/형성된 영역/숨겨진 영역</li>
+                <li>💀 <strong>끔찍한 영역 및 우버 보스 +3P, 총 24P</strong>: 끔찍한 영역/우버 사이러스/우버 메이븐/우버 코텍스/우버 포식자/우버 총주교/우버 쉐이퍼/우버 우버 엘더</li>
+            </ol>
+            <p><strong>🛡️ 개인 최대 포인트는 총 67P</strong></p>
+            <p><strong>💰 바운티 포인트 +1P</strong>: 바운티 포인트는 시청자들이 건 어려운 현상금 미션을 클리어하면 획득할 수 있습니다. 현상금 상품은 현상금 획득자에게 제공되고, 바운티 포인트는 팀에 귀속됩니다.</p>
+        </div>
+
+        <h2>🏅 팀 포인트 계산 🏅</h2>
+        <div class="point-calculation">
+            팀 포인트 = 각 팀 상위 20명의 포인트 + 스트리머 포인트 + 바운티 포인트
+        </div>
+        <p>스트리머와 시청자 모두의 점수가 합산되기 때문에 스트리머와 시청자가 모두 합심해야 승리할 수 있는 리그입니다.</p>
+        <p>각 팀 점수와 포인트 랭킹은 홈페이지를 통해 매일 갱신됩니다.</p>
     </div>
     <script>
-        // 페이지 로드 시 컨테이너 높이 조정
+        function adjustHeight() {
+            document.body.style.minHeight = window.innerHeight + 'px';
+        }
         window.addEventListener('load', adjustHeight);
         window.addEventListener('resize', adjustHeight);
-
-        function adjustHeight() {
-            var container = document.querySelector('.container');
-            container.style.height = window.innerHeight + 'px';
-        }
     </script>
 </body>
-
 </html>
