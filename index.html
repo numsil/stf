@@ -4,46 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Path of Exile 스트리머 팀 파이트</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap');
-        
         :root {
-            --main-bg-color: #0a0a0a;
-            --text-color: #c7c7c7;
-            --highlight-color: #af6025;
-            --secondary-color: #4a90e2;
-            --section-bg-color: #1a1a1a;
+            --main-bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --highlight-color: #58a6ff;
+            --secondary-color: #8b949e;
+            --section-bg-color: #161b22;
         }
         
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-        }
         body {
             font-family: 'Noto Sans KR', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--main-bg-color);
-            background-image: url('https://web.poecdn.com/image/layout/atlas-bg.jpg?1644561232000');
-            background-size: cover;
-            background-attachment: fixed;
-            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         .content {
-            width: 100%;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            box-sizing: border-box;
-            background-color: rgba(10, 10, 10, 0.9);
         }
         h1, h2, h3 {
             font-family: 'Cinzel', serif;
             color: var(--highlight-color);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         h1 {
             font-size: 2.5em;
@@ -56,28 +43,18 @@
             padding-bottom: 10px;
             margin-top: 40px;
         }
-        p {
-            margin-bottom: 15px;
-        }
-        ul, ol {
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
         .highlight {
             background-color: var(--section-bg-color);
-            color: var(--secondary-color);
             padding: 15px;
             border-radius: 5px;
             margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .warning {
-            background-color: var(--highlight-color);
+            background-color: #d73a4a;
             color: #ffffff;
             padding: 15px;
             border-radius: 5px;
             margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .team-vs {
             text-align: center;
@@ -86,14 +63,12 @@
             background-color: var(--section-bg-color);
             padding: 15px;
             border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .point-rule {
             background-color: var(--section-bg-color);
             padding: 20px;
             border-radius: 5px;
             margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .point-calculation {
             background-color: var(--highlight-color);
@@ -103,52 +78,30 @@
             text-align: center;
             margin: 20px 0;
             font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         strong {
-            color: var(--secondary-color);
+            color: var(--highlight-color);
         }
         .icon {
-            width: 24px;
-            height: 24px;
             margin-right: 10px;
-            vertical-align: middle;
         }
         .rule-item {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
         }
-        .rule-item .icon {
-            flex-shrink: 0;
-        }
         .gradient-text {
-            background: linear-gradient(45deg, #af6025, #4a90e2);
+            background: linear-gradient(45deg, #58a6ff, #a371f7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
-        }
-        @media (max-width: 600px) {
-            .content {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            .icon {
-                width: 20px;
-                height: 20px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="content">
         <h1>
-            <img src="https://web.poecdn.com/image/favicon/favicon-32x32.png" alt="PoE" class="icon">
+            <i class="fas fa-gamepad icon"></i>
             Path of Exile 스트리머 팀 파이트
         </h1>
 
@@ -156,34 +109,34 @@
         SSFHC (Solo Self-Found Hardcore) 모드에서 10일간 플레이어가 각자 플레이하며 포인트를 모아 팀에 기여할 수 있습니다.</p>
 
         <h2>
-            <img src="https://web.poecdn.com/image/icons/shop/scroll.png" alt="Scroll" class="icon">
+            <i class="fas fa-scroll icon"></i>
             리그 룰
         </h2>
         <ul>
             <li class="rule-item">
-                <img src="https://web.poecdn.com/image/icons/equipment/boots.png" alt="SSFHC" class="icon">
+                <i class="fas fa-user-shield icon"></i>
                 <strong>SSFHC</strong> (Solo Self-Found Hardcore)
             </li>
             <li class="rule-item">
-                <img src="https://web.poecdn.com/image/icons/monster/monster-damage.png" alt="Damage" class="icon">
+                <i class="fas fa-skull icon"></i>
                 몬스터 피해 증가
             </li>
             <li class="rule-item">
-                <img src="https://web.poecdn.com/image/icons/monster/monster-speed.png" alt="Speed" class="icon">
+                <i class="fas fa-bolt icon"></i>
                 몬스터 속도 증가
             </li>
             <li class="rule-item">
-                <img src="https://web.poecdn.com/image/icons/monster/monster-projectile.png" alt="Projectile" class="icon">
+                <i class="fas fa-meteor icon"></i>
                 몬스터 투사체 증가
             </li>
             <li class="rule-item">
-                <img src="https://web.poecdn.com/image/icons/monster/monster-aoe.png" alt="AoE" class="icon">
+                <i class="fas fa-expand-arrows-alt icon"></i>
                 몬스터 효과 범위 증가
             </li>
         </ul>
 
         <h2>
-            <img src="https://web.poecdn.com/image/icons/equipment/shield.png" alt="Team" class="icon">
+            <i class="fas fa-users icon"></i>
             팀 룰
         </h2>
         <p>팀은 스트리머 A팀과 스트리머 B팀으로 나누어집니다.</p>
@@ -193,12 +146,12 @@
         </div>
         <p>시청자들은 닉네임에 팀 명을 포함하여 자동 참가하게 됩니다. (ex: 비정상맨, 하교수_노누일호기 등)</p>
         <div class="warning">
-            <img src="https://web.poecdn.com/image/icons/equipment/warning.png" alt="Warning" class="icon">
+            <i class="fas fa-exclamation-triangle icon"></i>
             <strong>주의: 팀명을 정하지 않은 유저는 팀에 속하지 않아 상품을 획득할 수 없습니다.</strong>
         </div>
 
         <h2>
-            <img src="https://web.poecdn.com/image/icons/equipment/currency.png" alt="Points" class="icon">
+            <i class="fas fa-chart-bar icon"></i>
             점수 획득 방식 및 집계
         </h2>
         <p>점수 획득 방식은 스트리머와 일반 시청자 모두 동일합니다. 아래 포인트 룰에 따라 획득한 포인트를 합산해 팀 점수가 됩니다.</p>
@@ -206,32 +159,32 @@
         <div class="point-rule">
             <ol>
                 <li class="rule-item">
-                    <img src="https://web.poecdn.com/image/icons/equipment/experience.png" alt="Level" class="icon">
+                    <i class="fas fa-level-up-alt icon"></i>
                     <strong>레벨 포인트</strong>: 레벨 5당 +1P (최대 95레벨, 총 19P)
                 </li>
                 <li class="rule-item">
-                    <img src="https://web.poecdn.com/image/icons/monster/boss.png" alt="Boss" class="icon">
+                    <i class="fas fa-crown icon"></i>
                     <strong>보스 킬 시작 +1P, 총 2P</strong>: 퀘스트 총주교/포식자 <em>일반도 허용</em>
                 </li>
                 <li class="rule-item">
-                    <img src="https://web.poecdn.com/image/icons/monster/boss-unique.png" alt="Unique Boss" class="icon">
+                    <i class="fas fa-dragon icon"></i>
                     <strong>일반 보스 +2P, 총 16P</strong>: 앗지리/카타리나(83)/사이러스/메이븐/쉐이퍼/엘더/우버 엘더/우버 앗지리
                 </li>
                 <li class="rule-item">
-                    <img src="https://web.poecdn.com/image/icons/equipment/map.png" alt="Map" class="icon">
+                    <i class="fas fa-map icon"></i>
                     <strong>영역 +2P, 총 6P</strong>: 뒤틀린 영역/형성된 영역/숨겨진 영역
                 </li>
                 <li class="rule-item">
-                    <img src="https://web.poecdn.com/image/icons/monster/boss-uber.png" alt="Uber Boss" class="icon">
+                    <i class="fas fa-skull-crossbones icon"></i>
                     <strong>끔찍한 영역 및 우버 보스 +3P, 총 24P</strong>: 끔찍한 영역/우버 사이러스/우버 메이븐/우버 코텍스/우버 포식자/우버 총주교/우버 쉐이퍼/우버 우버 엘더
                 </li>
             </ol>
-            <p><img src="https://web.poecdn.com/image/icons/equipment/armour.png" alt="Max Points" class="icon"> <strong>개인 최대 포인트는 총 67P</strong></p>
-            <p><img src="https://web.poecdn.com/image/icons/equipment/currency-unique.png" alt="Bounty" class="icon"> <strong>바운티 포인트 +1P</strong>: 바운티 포인트는 시청자들이 건 어려운 현상금 미션을 클리어하면 획득할 수 있습니다. 현상금 상품은 현상금 획득자에게 제공되고, 바운티 포인트는 팀에 귀속됩니다.</p>
+            <p><i class="fas fa-shield-alt icon"></i> <strong>개인 최대 포인트는 총 67P</strong></p>
+            <p><i class="fas fa-coins icon"></i> <strong>바운티 포인트 +1P</strong>: 바운티 포인트는 시청자들이 건 어려운 현상금 미션을 클리어하면 획득할 수 있습니다. 현상금 상품은 현상금 획득자에게 제공되고, 바운티 포인트는 팀에 귀속됩니다.</p>
         </div>
 
         <h2>
-            <img src="https://web.poecdn.com/image/icons/equipment/trophy.png" alt="Team Points" class="icon">
+            <i class="fas fa-trophy icon"></i>
             팀 포인트 계산
         </h2>
         <div class="point-calculation">
@@ -240,12 +193,5 @@
         <p>스트리머와 시청자 모두의 점수가 합산되기 때문에 스트리머와 시청자가 모두 합심해야 승리할 수 있는 리그입니다.</p>
         <p>각 팀 점수와 포인트 랭킹은 홈페이지를 통해 매일 갱신됩니다.</p>
     </div>
-    <script>
-        function adjustHeight() {
-            document.body.style.minHeight = window.innerHeight + 'px';
-        }
-        window.addEventListener('load', adjustHeight);
-        window.addEventListener('resize', adjustHeight);
-    </script>
 </body>
 </html>
