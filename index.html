@@ -15,18 +15,20 @@
             --section-bg-color: #1a1a1a;
         }
         
-        body {
+        body, html {
             font-family: 'Noto Sans KR', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--main-bg-color);
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
         }
         .content {
-            max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
             padding: 20px;
+            box-sizing: border-box;
         }
         h1, h2, h3 {
             font-family: 'Cinzel', serif;
