@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>스트리머 팀 파이트</title>
+    <title>Path of Exile 스트리머 팀 파이트</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap');
         
         :root {
-            --main-bg-color: #121212;
-            --text-color: #e0e0e0;
-            --highlight-color: #ff4757;
-            --secondary-color: #ffa502;
-            --section-bg-color: #1e272e;
+            --main-bg-color: #0a0a0a;
+            --text-color: #c7c7c7;
+            --highlight-color: #af6025;
+            --secondary-color: #4a90e2;
+            --section-bg-color: #1a1a1a;
         }
         
         html, body {
@@ -27,16 +27,21 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--main-bg-color);
+            background-image: url('https://web.poecdn.com/image/layout/atlas-bg.jpg?1644561232000');
+            background-size: cover;
+            background-attachment: fixed;
             box-sizing: border-box;
         }
         .content {
             width: 100%;
-            max-width: 100%;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             box-sizing: border-box;
+            background-color: rgba(10, 10, 10, 0.9);
         }
         h1, h2, h3 {
+            font-family: 'Cinzel', serif;
             color: var(--highlight-color);
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
@@ -118,7 +123,7 @@
             flex-shrink: 0;
         }
         .gradient-text {
-            background: linear-gradient(45deg, #ff4757, #ffa502);
+            background: linear-gradient(45deg, #af6025, #4a90e2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
@@ -143,59 +148,97 @@
 <body>
     <div class="content">
         <h1>
-            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 6H3C2.4 6 2 6.4 2 7V17C2 17.6 2.4 18 3 18H21C21.6 18 22 17.6 22 17V7C22 6.4 21.6 6 21 6ZM11 13H9V15H7V13H5V11H7V9H9V11H11V13ZM15 15C14.4 15 14 14.6 14 14C14 13.4 14.4 13 15 13C15.6 13 16 13.4 16 14C16 14.6 15.6 15 15 15ZM18 12C17.4 12 17 11.6 17 11C17 10.4 17.4 10 18 10C18.6 10 19 10.4 19 11C19 11.6 18.6 12 18 12Z" fill="currentColor"/>
-            </svg>
-            스트리머 팀 파이트
-            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 6H3C2.4 6 2 6.4 2 7V17C2 17.6 2.4 18 3 18H21C21.6 18 22 17.6 22 17V7C22 6.4 21.6 6 21 6ZM11 13H9V15H7V13H5V11H7V9H9V11H11V13ZM15 15C14.4 15 14 14.6 14 14C14 13.4 14.4 13 15 13C15.6 13 16 13.4 16 14C16 14.6 15.6 15 15 15ZM18 12C17.4 12 17 11.6 17 11C17 10.4 17.4 10 18 10C18.6 10 19 10.4 19 11C19 11.6 18.6 12 18 12Z" fill="currentColor"/>
-            </svg>
+            <img src="https://web.poecdn.com/image/favicon/favicon-32x32.png" alt="PoE" class="icon">
+            Path of Exile 스트리머 팀 파이트
         </h1>
 
-        <p><span class="gradient-text">🌟 스트리머 팀 파이트 (Streamer Team Fight)</span>는 스트리머와 시청자가 한 팀이 되어 점수를 모아 팀을 승리로 이끄는 리그입니다.<br>
-        SSFHC (솔로 하드코어) 모드에서 10일간 플레이어가 각자 플레이하며 포인트를 모아 팀에 기여할 수 있습니다.</p>
+        <p><span class="gradient-text">스트리머 팀 파이트 (Streamer Team Fight)</span>는 스트리머와 시청자가 한 팀이 되어 점수를 모아 팀을 승리로 이끄는 리그입니다.<br>
+        SSFHC (Solo Self-Found Hardcore) 모드에서 10일간 플레이어가 각자 플레이하며 포인트를 모아 팀에 기여할 수 있습니다.</p>
 
         <h2>
-            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z" fill="currentColor"/>
-            </svg>
+            <img src="https://web.poecdn.com/image/icons/shop/scroll.png" alt="Scroll" class="icon">
             리그 룰
         </h2>
         <ul>
             <li class="rule-item">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" fill="currentColor"/>
-                </svg>
+                <img src="https://web.poecdn.com/image/icons/equipment/boots.png" alt="SSFHC" class="icon">
                 <strong>SSFHC</strong> (Solo Self-Found Hardcore)
             </li>
             <li class="rule-item">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
-                </svg>
+                <img src="https://web.poecdn.com/image/icons/monster/monster-damage.png" alt="Damage" class="icon">
                 몬스터 피해 증가
             </li>
             <li class="rule-item">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.49 5.48C14.59 5.48 15.49 4.58 15.49 3.48C15.49 2.38 14.59 1.48 13.49 1.48C12.39 1.48 11.49 2.38 11.49 3.48C11.49 4.58 12.39 5.48 13.49 5.48ZM9.89 19.38L10.89 14.98L12.99 16.98V22.98H14.99V15.48L12.89 13.48L13.49 10.48C14.79 11.98 16.79 12.98 18.99 12.98V10.98C17.09 10.98 15.49 9.98 14.69 8.58L13.69 6.98C13.29 6.38 12.69 5.98 11.99 5.98C11.69 5.98 11.49 6.08 11.19 6.08L5.99 8.28V12.98H7.99V9.58L9.79 8.88L8.19 16.98L3.29 15.98L2.89 17.98L9.89 19.38Z" fill="currentColor"/>
-                </svg>
+                <img src="https://web.poecdn.com/image/icons/monster/monster-speed.png" alt="Speed" class="icon">
                 몬스터 속도 증가
             </li>
             <li class="rule-item">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="currentColor"/>
-                </svg>
+                <img src="https://web.poecdn.com/image/icons/monster/monster-projectile.png" alt="Projectile" class="icon">
                 몬스터 투사체 증가
             </li>
             <li class="rule-item">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 3L17.3 5.3L14.41 8.17L15.83 9.59L18.7 6.7L21 9V3H15ZM3 9L5.3 6.7L8.17 9.59L9.59 8.17L6.7 5.3L9 3H3V9ZM9 21L6.7 18.7L9.59 15.83L8.17 14.41L5.3 17.3L3 15V21H9ZM21 15L18.7 17.3L15.83 14.41L14.41 15.83L17.3 18.7L15 21H21V15Z" fill="currentColor"/>
-                </svg>
+                <img src="https://web.poecdn.com/image/icons/monster/monster-aoe.png" alt="AoE" class="icon">
                 몬스터 효과 범위 증가
             </li>
         </ul>
 
-        <!-- 나머지 내용은 동일한 방식으로 SVG 아이콘으로 대체 -->
+        <h2>
+            <img src="https://web.poecdn.com/image/icons/equipment/shield.png" alt="Team" class="icon">
+            팀 룰
+        </h2>
+        <p>팀은 스트리머 A팀과 스트리머 B팀으로 나누어집니다.</p>
+        <p>스트리머 팀이 정해지면 A팀과 B팀은 각각 팀 명을 정하게 됩니다. 임시로 이전 리그의 팀명을 예로 들겠습니다.</p>
+        <div class="team-vs">
+            <strong>A 팀 (비정상) VS B 팀 (하교수)</strong>
+        </div>
+        <p>시청자들은 닉네임에 팀 명을 포함하여 자동 참가하게 됩니다. (ex: 비정상맨, 하교수_노누일호기 등)</p>
+        <div class="warning">
+            <img src="https://web.poecdn.com/image/icons/equipment/warning.png" alt="Warning" class="icon">
+            <strong>주의: 팀명을 정하지 않은 유저는 팀에 속하지 않아 상품을 획득할 수 없습니다.</strong>
+        </div>
 
+        <h2>
+            <img src="https://web.poecdn.com/image/icons/equipment/currency.png" alt="Points" class="icon">
+            점수 획득 방식 및 집계
+        </h2>
+        <p>점수 획득 방식은 스트리머와 일반 시청자 모두 동일합니다. 아래 포인트 룰에 따라 획득한 포인트를 합산해 팀 점수가 됩니다.</p>
+        <h3>[포인트 룰]</h3>
+        <div class="point-rule">
+            <ol>
+                <li class="rule-item">
+                    <img src="https://web.poecdn.com/image/icons/equipment/experience.png" alt="Level" class="icon">
+                    <strong>레벨 포인트</strong>: 레벨 5당 +1P (최대 95레벨, 총 19P)
+                </li>
+                <li class="rule-item">
+                    <img src="https://web.poecdn.com/image/icons/monster/boss.png" alt="Boss" class="icon">
+                    <strong>보스 킬 시작 +1P, 총 2P</strong>: 퀘스트 총주교/포식자 <em>일반도 허용</em>
+                </li>
+                <li class="rule-item">
+                    <img src="https://web.poecdn.com/image/icons/monster/boss-unique.png" alt="Unique Boss" class="icon">
+                    <strong>일반 보스 +2P, 총 16P</strong>: 앗지리/카타리나(83)/사이러스/메이븐/쉐이퍼/엘더/우버 엘더/우버 앗지리
+                </li>
+                <li class="rule-item">
+                    <img src="https://web.poecdn.com/image/icons/equipment/map.png" alt="Map" class="icon">
+                    <strong>영역 +2P, 총 6P</strong>: 뒤틀린 영역/형성된 영역/숨겨진 영역
+                </li>
+                <li class="rule-item">
+                    <img src="https://web.poecdn.com/image/icons/monster/boss-uber.png" alt="Uber Boss" class="icon">
+                    <strong>끔찍한 영역 및 우버 보스 +3P, 총 24P</strong>: 끔찍한 영역/우버 사이러스/우버 메이븐/우버 코텍스/우버 포식자/우버 총주교/우버 쉐이퍼/우버 우버 엘더
+                </li>
+            </ol>
+            <p><img src="https://web.poecdn.com/image/icons/equipment/armour.png" alt="Max Points" class="icon"> <strong>개인 최대 포인트는 총 67P</strong></p>
+            <p><img src="https://web.poecdn.com/image/icons/equipment/currency-unique.png" alt="Bounty" class="icon"> <strong>바운티 포인트 +1P</strong>: 바운티 포인트는 시청자들이 건 어려운 현상금 미션을 클리어하면 획득할 수 있습니다. 현상금 상품은 현상금 획득자에게 제공되고, 바운티 포인트는 팀에 귀속됩니다.</p>
+        </div>
+
+        <h2>
+            <img src="https://web.poecdn.com/image/icons/equipment/trophy.png" alt="Team Points" class="icon">
+            팀 포인트 계산
+        </h2>
+        <div class="point-calculation">
+            팀 포인트 = 각 팀 상위 20명의 포인트 + 스트리머 포인트 + 바운티 포인트
+        </div>
+        <p>스트리머와 시청자 모두의 점수가 합산되기 때문에 스트리머와 시청자가 모두 합심해야 승리할 수 있는 리그입니다.</p>
+        <p>각 팀 점수와 포인트 랭킹은 홈페이지를 통해 매일 갱신됩니다.</p>
     </div>
     <script>
         function adjustHeight() {
