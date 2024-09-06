@@ -15,16 +15,24 @@
             --section-bg-color: #1a1a1a;
         }
         
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
         body {
             font-family: 'Noto Sans KR', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--main-bg-color);
-            margin: 0;
             padding: 20px;
-            min-height: 100%;
             box-sizing: border-box;
         }
+
+        /* 나머지 스타일은 그대로 유지 */
         h1, h2, h3 {
             font-family: 'Cinzel', serif;
             color: var(--highlight-color);
@@ -101,6 +109,7 @@
     </style>
 </head>
 <body>
+    <!-- 기존 body 내용은 그대로 유지 -->
     <h1>
         <i class="fas fa-gamepad icon"></i>
         Path of Exile 스트리머 팀 파이트
@@ -193,5 +202,22 @@
     </div>
     <p>스트리머와 시청자 모두의 점수가 합산되기 때문에 스트리머와 시청자가 모두 합심해야 승리할 수 있는 리그입니다.</p>
     <p>각 팀 점수와 포인트 랭킹은 홈페이지를 통해 매일 갱신됩니다.</p>
+
+    <script>
+    window.addEventListener('load', function() {
+        var height = document.body.scrollHeight;
+        window.parent.postMessage({
+            frameHeight: height
+        }, '*');
+    });
+
+    // 리사이즈 이벤트 리스너 추가
+    window.addEventListener('resize', function() {
+        var height = document.body.scrollHeight;
+        window.parent.postMessage({
+            frameHeight: height
+        }, '*');
+    });
+    </script>
 </body>
 </html>
