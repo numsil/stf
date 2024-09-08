@@ -17,7 +17,7 @@
         
         html, body {
             height: auto !important;
-            min-height: 100% !important;
+            min-height: 100vh !important;
             overflow: visible !important;
         }
 
@@ -217,13 +217,28 @@
       페이지 끝
     </div>
     <script>
-    function sendHeight() {
-        var height = document.body.scrollHeight + 150; // 추가 여백
+    function sendHeight() {    
+        var height = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight,
+            document.body.clientHeight,
+            document.documentElement.clientHeight
+        );
+        height += 100; // 추가 여백
         window.parent.postMessage({frameHeight: height + 'px'}, '*');
     }
 
     window.addEventListener('load', sendHeight);
-    setInterval(sendHeight, 1000); // 주기적으로 높이 확인 및 전송
+    window.addEventListener('resize', sendHeight);
+
+    // 콘텐츠 변경 감지 및 높이 전송
+    var observer = new MutationObserver(sendHeight);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // 주기적으로 높이 확인 및 전송
+    setInterval(sendHeight, 500);
     </script>
 </body>
 </html>
