@@ -17,52 +17,52 @@
         
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: var(--text-color);
             background-color: var(--main-bg-color);
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             min-height: 100%;
             box-sizing: border-box;
         }
-        h1, h2, h3 {
+        h1, h2 {
             font-family: 'Cinzel', serif;
             color: var(--highlight-color);
         }
         h1 {
             font-size: 2.5em;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(253, 12, 44, 0.5);
         }
         h2 {
             font-size: 1.8em;
             border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
-            margin-top: 40px;
+            padding-bottom: 8px;
+            margin-top: 30px;
         }
-        .highlight {
+        p {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        ul {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            padding-left: 25px;
+        }
+        .highlight, .warning, .team-vs {
             background-color: var(--section-bg-color);
-            padding: 15px;
+            padding: 12px;
             border-radius: 5px;
-            margin: 20px 0;
+            margin: 15px 0;
             border: 1px solid var(--highlight-color);
         }
         .warning {
             background-color: var(--secondary-color);
-            color: var(--text-color);
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
         }
         .team-vs {
             text-align: center;
             font-size: 1.2em;
-            margin: 20px 0;
-            background-color: var(--section-bg-color);
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid var(--highlight-color);
         }
         .icon {
             margin-right: 10px;
@@ -71,7 +71,7 @@
         .rule-item {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .gradient-text {
             background: linear-gradient(45deg, var(--highlight-color), var(--secondary-color));
@@ -79,31 +79,31 @@
             -webkit-text-fill-color: transparent;
             font-weight: bold;
         }
- .info-section {
-        background-color: rgba(254, 186, 5, 0.05);
-        border: 1px solid rgba(254, 186, 5, 0.3);
-        border-radius: 5px;
-        padding: 10px;
-        margin: 15px 0;
-        font-size: 0.8em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;  /* 수직 중앙 정렬을 위해 추가 */
-        min-height: 80px;  /* 최소 높이 설정 (필요에 따라 조정 가능) */
-    }
-    .info-item {
-        margin: 2px 0;
-        display: flex;
-        align-items: center;
-    }
-    .info-icon {
-        margin-right: 8px;
-        color: var(--highlight-color);
-        font-size: 0.9em;
-        width: 15px;
-        text-align: center;
-        flex-shrink: 0;  /* 아이콘 크기 유지 */
-    }
+        .info-section {
+            background-color: rgba(254, 186, 5, 0.05);
+            border: 1px solid rgba(254, 186, 5, 0.3);
+            border-radius: 5px;
+            padding: 8px;
+            margin: 12px 0;
+            font-size: 0.8em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 70px;
+        }
+        .info-item {
+            margin: 1px 0;
+            display: flex;
+            align-items: center;
+        }
+        .info-icon {
+            margin-right: 8px;
+            color: var(--highlight-color);
+            font-size: 0.9em;
+            width: 15px;
+            text-align: center;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
@@ -116,9 +116,9 @@
     SSFHC (솔로 하드코어) 모드에서 10일간 플레이어가 각자 플레이하며 포인트를 모아 팀에 기여할 수 있습니다.</p>
 
     <div class="info-section">
-        <div class="info-item"><i class="fas fa-exclamation-circle icon"></i>본 이벤트는 카카오 계정을 사용하는 유저만 참여가 가능합니다(개인정보 동의 문제로 해외 계정은 상품 지급 불가)</div>
-        <div class="info-item"><i class="fas fa-comments icon"></i>채팅채널: /Global 1116</div>
-        <div class="info-item"><i class="fas fa-ban icon"></i>*욕설 등 불쾌감을 줄 수 있는 언행 시 리그 강퇴 처리 될 수 있습니다</div>
+        <div class="info-item"><i class="fas fa-exclamation-circle info-icon"></i>본 이벤트는 카카오 계정을 사용하는 유저만 참여가 가능합니다(개인정보 동의 문제로 해외 계정은 상품 지급 불가)</div>
+        <div class="info-item"><i class="fas fa-comments info-icon"></i>채팅채널: /Global 1116</div>
+        <div class="info-item"><i class="fas fa-ban info-icon"></i>욕설 등 불쾌감을 줄 수 있는 언행 시 리그 강퇴 처리 될 수 있습니다</div>
     </div>
 
     <h2>
@@ -127,8 +127,7 @@
     </h2>
     <ul>
         <li class="rule-item">
-            <i class="fas fa-user-shield icon"></i>
-            <strong>SSFHC</strong> (Solo Self-Found Hardcore)
+            <strong>- S S F H C -</strong>
         </li>
         <li class="rule-item">
             <i class="fas fa-skull icon"></i>
