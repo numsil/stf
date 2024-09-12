@@ -24,6 +24,7 @@
             padding: 20px;
             min-height: 100%;
             box-sizing: border-box;
+            font-size: 16px;
         }
         h1, h2, h3 {
             font-family: 'Cinzel', serif;
@@ -78,6 +79,49 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
+        }
+        
+        /* 반응형 디자인을 위한 미디어 쿼리 */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 12px;
+                padding: 5px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            .team-vs {
+                font-size: 1em;
+            }
+        }
+        
+        /* 뷰포트 단위를 사용한 동적 폰트 크기 */
+        @media screen and (min-width: 320px) {
+            body {
+                font-size: calc(12px + 0.5vw);
+            }
+            h1 {
+                font-size: calc(1.8em + 1vw);
+            }
+            h2 {
+                font-size: calc(1.3em + 0.5vw);
+            }
         }
     </style>
 </head>
