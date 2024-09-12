@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>S T F 상금 및 현상금</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <title>Path of Exile 스트리머 팀 파이트</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -21,57 +21,30 @@
             color: var(--text-color);
             background-color: var(--main-bg-color);
             margin: 0;
-            padding: 10px;
+            padding: 20px;
             min-height: 100%;
             box-sizing: border-box;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--highlight-color);
         }
         h1 {
-            font-size: 2.6em;
+            font-size: 2.5em;
             text-align: center;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            flex-wrap: nowrap; /* 줄바꿈 방지 */
-            white-space: nowrap; /* 줄바꿈 방지 */
-        }
-        h1 .icon {
-            margin-right: 20px; /* 아이콘과 텍스트 사이의 간격 조정 */
-            font-size: 1em; /* 아이콘 크기를 텍스트에 맞춤 */
-            flex-shrink: 0; /* 아이콘 크기 유지 */
-        }
-        h1 .gradient-text {
-            filter: drop-shadow(2px 2px 4px rgba(253, 12, 44, 0.5));
-        }
-        h2, h3 {
-            font-family: 'Orbitron', sans-serif;
-            display: flex;
-            align-items: center;
-            letter-spacing: 1px;
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, var(--highlight-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-text-fill-color: transparent;
-            text-fill-color: transparent;
-            font-weight: 800;
-            margin-left: 5px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(253, 12, 44, 0.5);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         h2 {
             font-size: 1.8em;
             border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 10px;
-            font-weight: 700;
-        }
-        h3 {
-            margin-bottom: 10px;
-            font-family: 'Rajdhani', sans-serif;
-            font-weight: 600;
-            font-size: 1.5em;
+            margin-top: 40px;
         }
         .highlight {
             background-color: var(--section-bg-color);
@@ -86,213 +59,100 @@
             padding: 15px;
             border-radius: 5px;
             margin: 20px 0;
-            display: flex;
-            align-items: center;
         }
-        .icon {
-            margin-right: 15px;
-            color: var(--highlight-color);
-            font-size: 1.3em;
-            width: 30px;
+        .team-vs {
             text-align: center;
-        }
-        .reward-section {
+            font-size: 1.2em;
+            margin: 20px 0;
             background-color: var(--section-bg-color);
             padding: 15px;
             border-radius: 5px;
-            margin: 10px 0;
             border: 1px solid var(--highlight-color);
-            box-shadow: 0 0 15px rgba(254, 186, 5, 0.3);
         }
-        .reward-item {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        .reward-icon {
-            font-size: 1.2em;
-            margin-right: 15px;
-            color: var(--highlight-color);
-            width: 25px;
-            text-align: center;
-            flex-shrink: 0;
-        }
-        .reward-text {
-            flex: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .bounty-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .bounty-card {
-            background-color: var(--section-bg-color);
-            border: 1px solid var(--highlight-color);
-            border-radius: 5px;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .bounty-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(254, 186, 5, 0.4);
-        }
-        .bounty-title {
-            font-weight: bold;
-            color: var(--highlight-color);
-            margin-bottom: 15px;
-            font-size: 1.2em;
-            display: flex;
-            align-items: center;
-            font-family: 'Rajdhani', sans-serif;
-        }
-        .bounty-icon {
-            font-size: 1.2em;
+        .icon {
             margin-right: 10px;
-            width: 25px;
-            text-align: center;
+            color: var(--secondary-color);
+        }
+        .rule-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, var(--highlight-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
         }
         
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            h1 .icon {
-                margin-right: 10px;
-            }
-            h2 {
-                font-size: 1.8em;
-            }
-            h3 {
-                font-size: 1.3em;
-            }
-            .reward-section {
-                padding: 15px;
-            }
-            .bounty-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-                      .reward-item {
-                font-size: 0.9em;
-            }
-            .reward-icon {
-                margin-right: 10px;
-            }
+        /* 화면 크기에 따른 폰트 크기 조정 */
+        @media screen and (max-width: 1200px) {
+            body { font-size: 14px; }
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.6em; }
         }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-            h1 .icon {
-                margin-right: 5px;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            h3 {
-                font-size: 1.2em;
-            }
-            .icon {
-                font-size: 1.1em;
-                width: 25px;
-            }
-            .reward-item {
-                font-size: 0.8em;
-            }
-            .reward-icon {
-                margin-right: 5px;
-            }
-            .warning {
-                flex-direction: column;
-                text-align: center;
-            }
-            .warning .icon {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-            .bounty-grid {
-                grid-template-columns: 1fr;
-            }
+        
+        @media screen and (max-width: 900px) {
+            body { font-size: 12px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.4em; }
+        }
+        
+        @media screen and (max-width: 600px) {
+            body { font-size: 10px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.2em; }
         }
     </style>
 </head>
 <body>
-    <!-- h1은 그대로 유지 -->
     <h1>
         <i class="fas fa-gamepad icon"></i>
-        <span class="gradient-text" style="margin-left: 20px">S T F 상금 및 현상금</span>
+        Path of Exile 스트리머 팀 파이트
     </h1>
 
+    <p><span class="gradient-text">스트리머 팀 파이트 (Streamer Team Fight)</span>는 스트리머와 시청자가 한 팀이 되어 점수를 모아 팀을 승리로 이끄는 리그입니다. SSFHC (솔로 하드코어) 모드에서 10일간 플레이어가 각자 플레이하며 포인트를 모아 팀에 기여할 수 있습니다.</p>
+
     <h2>
-        <i class="fas fa-gift icon"></i>
-        <span class="gradient-text">상품 및 상금 목록</span>
+        <i class="fas fa-scroll icon"></i>
+        리그 룰
     </h2>
-    
-    <div class="reward-section">
-        <h3><i class="fas fa-trophy icon"></i><span class="gradient-text">상품</span></h3>
-        <div class="reward-item">
-            <i class="fas fa-microchip reward-icon"></i>
-            <div class="reward-text">레벨 95 달성) RTX4090 ('우승팀' 1명 추첨)</div>
-        </div>
-        <div class="reward-item">
-            <i class="fas fa-box-open reward-icon"></i>
-            <div class="reward-text">레벨 90 달성) 미스터리 박스 확정 지급 (전원)</div>
-        </div>
-        <div class="reward-item">
-            <i class="fas fa-gift reward-icon"></i>
-            <div class="reward-text">레벨 70 달성) 카카오 프렌즈 현물 인형 (20명 추첨)</div>
-        </div>
-        <div class="reward-item">
-            <i class="fas fa-box reward-icon"></i>
-            <div class="reward-text">레벨 50 달성) 미스터리 박스 (000명 추첨)</div>
-        </div>
-    </div>
+    <ul>
+        <li class="rule-item">
+            <i class="fas fa-user-shield icon"></i>
+            <strong>SSFHC</strong> (Solo Self-Found Hardcore)
+        </li>
+        <li class="rule-item">
+            <i class="fas fa-skull icon"></i>
+            몬스터 피해 증가
+        </li>
+        <li class="rule-item">
+            <i class="fas fa-bolt icon"></i>
+            몬스터 속도 증가
+        </li>
+        <li class="rule-item">
+            <i class="fas fa-meteor icon"></i>
+            몬스터 투사체 증가
+        </li>
+        <li class="rule-item">
+            <i class="fas fa-expand-arrows-alt icon"></i>
+            몬스터 효과 범위 증가
+        </li>
+    </ul>
 
-    <div class="reward-section">
-        <h3><i class="fas fa-coins icon"></i><span class="gradient-text">상금</span></h3>
-        <div class="reward-item">
-            <i class="fas fa-skull-crossbones reward-icon"></i>
-            <div class="reward-text">보스킬 인증 성공) 문화 상품권 2만원 (50명 추첨)</div>
-        </div>
-        <div class="reward-item">
-            <i class="fas fa-crown reward-icon"></i>
-            <div class="reward-text">전직별 포인트 1위) 문화 상품권 3만원 (19명)</div>
-        </div>
+    <h2>
+        <i class="fas fa-users icon"></i>
+        팀 룰
+    </h2>
+    <p>팀은 스트리머 A팀과 스트리머 B팀으로 나누어집니다.</p>
+    <p>스트리머 팀이 정해지면 A팀과 B팀은 각각 팀 명을 정하게 됩니다. 임시로 이전 리그의 팀명을 예로 들겠습니다.</p>
+    <div class="team-vs">
+        <strong>A 팀 (비정상) VS B 팀 (하교수)</strong>
     </div>
-
-    <div class="reward-section">
-        <h3><i class="fas fa-users icon"></i><span class="gradient-text">팀 보상</span></h3>
-        <div class="reward-item">
-            <i class="fas fa-award reward-icon"></i>
-            <div class="reward-text">우승 팀) 1위~10위 10만원, 11~20위 5만원</div>
-        </div>
-        <div class="reward-item">
-            <i class="fas fa-medal reward-icon"></i>
-            <div class="reward-text">준우승 팀) 1위~10위 5만원, 11~20위 3만원</div>
-        </div>
-    </div>
-
-    <div class="reward-section">
-        <h3><i class="fas fa-video icon"></i><span class="gradient-text">스트리머 보상</span></h3>
-        <div class="reward-item">
-            <i class="fas fa-star reward-icon"></i>
-            <div class="reward-text">우승 팀) 총 700만원</div>
-        </div>
-        <div class="reward-item">
-            <i class="fas fa-certificate reward-icon"></i>
-            <div class="reward-text">준우승 팀) 총 300만원</div>
-        </div>
+    <p>시청자들은 닉네임에 팀 명을 포함하여 자동 참가하게 됩니다. (ex: 비정상맨, 하교수_노누일호기 등)</p>
+    <div class="warning">
+        <i class="fas fa-exclamation-triangle icon"></i>
+        <strong>주의: 팀명을 정하지 않은 유저는 팀에 속하지 않아 상품을 획득할 수 없습니다.</strong>
     </div>
 </body>
 </html>
